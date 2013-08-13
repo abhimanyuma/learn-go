@@ -17,6 +17,12 @@ var (
 //Var to define variables //Now adding initial values
 var alpha,beta,gamma int = 42,0,21
 
+func pow(x, n, lim float64) float64 {
+    if v := math.Pow(x, n); v < lim {
+        return v
+    }
+    return lim
+}
 
 
 //Shows named return in GO
@@ -24,7 +30,8 @@ func extendedGCD (a,b int) (int,int) {
 	x,lastx := 0,1
 	y,lasty := 1,0
 	q := 0
-	for b!=0 {
+	//In Go for is while
+	for b>0 {
 		q = a/b
 		a,b = b, a%b
 		x, lastx = (lastx - q*x), x
@@ -66,7 +73,7 @@ func main(){
     fmt.Printf(f, ToBe, ToBe)
     fmt.Printf(f, MaxInt, MaxInt)
     fmt.Printf(f, z, z)
-    
+    //Fibonacci is quite easy in go
     a,b := 1,1
     for a<100 {
     	a,b = a+b,a
@@ -75,5 +82,6 @@ func main(){
 
     fmt.Println(extendedGCD(42,35))
 
+    fmt.Println(pow(3, 2, 10),pow(3, 3, 20),)
 
 }
