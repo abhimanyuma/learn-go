@@ -7,7 +7,7 @@ import (
   // "bytes"
   "math"
 )
-func sum(a int,b int) int {
+func sum(a,b int) int {
 	return (a+b)
 }
 
