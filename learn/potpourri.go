@@ -51,6 +51,7 @@ func main(){
 	const e  = math.E
 	rand.Seed( time.Now().UTC().UnixNano())
 	fmt.Println("π = ",pi," e = ",e)
+	// pi = pi + e Can't use coz pi is const
 	fmt.Println("My constant = ",(math.Pi*math.Pi)/(math.E+math.E))
 	fmt.Println("My favourite number is",rand.Intn(43));
 	fmt.Printf("Now you have %d problems\n",
@@ -62,4 +63,12 @@ func main(){
     fmt.Printf(f, ToBe, ToBe)
     fmt.Printf(f, MaxInt, MaxInt)
     fmt.Printf(f, z, z)
+    
+    a,b := 1,1
+    for i:= 0;i<10;i++ {
+    	a,b = a+b,a
+    	fmt.Println(a,b)
+    }
+
+
 }
