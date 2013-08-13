@@ -17,6 +17,14 @@ var (
 //Var to define variables //Now adding initial values
 var alpha,beta,gamma int = 42,0,21
 
+func Sqrt(x float64) float64 {
+	z := float64(1)
+	const times = 20
+	for i:=0 ; i<times; i++ {
+		z=z-(z*z-x)/(2*z)
+	}
+	return z
+}
 
 func pow(x, n, lim float64) float64 {
     if v := math.Pow(x, n); v < lim {
@@ -88,5 +96,7 @@ func main(){
     fmt.Println(extendedGCD(42,35))
 
     fmt.Println(pow(3, 2, 10),pow(3, 3, 20))
+
+    fmt.Println(Sqrt(2))
 
 }
