@@ -20,14 +20,17 @@ var alpha,beta,gamma int = 42,0,21
 
 
 //Shows named return in GO
-func extendedGCD (a,b int) (x,y int) {
-	x = 0
-	y = 1
-	lastx := 1
-	lasty := 0
-	x = x-lastx
-	y = y-lasty
-	return 
+func extendedGCD (a,b int) (int,int) {
+	x,lastx := 0,1
+	y,lasty := 1,0
+	q := 0
+	for b!=0 {
+		q = a/b
+		a,b = b, a%b
+		x, lastx = (lastx - q*x), x
+        y, lasty = (lasty - q*y), y 
+	}
+	return lastx,lasty
 }
 
 //Shows multiple return in Go, well actually
@@ -65,10 +68,12 @@ func main(){
     fmt.Printf(f, z, z)
     
     a,b := 1,1
-    for i:= 0;i<10;i++ {
+    for a<100 {
     	a,b = a+b,a
     	fmt.Println(a,b)
     }
+
+    fmt.Println(extendedGCD(42,35))
 
 
 }
