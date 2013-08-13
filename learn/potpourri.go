@@ -9,7 +9,7 @@ import (
 )
 //Var to define variables //Now adding initial values
 var alpha,beta,gamma int = 42,0,21
-var iscorrect,iswrong,isascii = true,false,"Yes!" 
+
 
 
 //Shows named return in GO
@@ -37,6 +37,9 @@ func sum(a,b int) int {
 
 
 func main(){
+	//Omitting var by using
+	iscorrect,iswrong,isascii := true,false,"Yes!" 
+
   	rand.Seed( time.Now().UTC().UnixNano())
   	fmt.Println("π = ",math.Pi," e = ",math.E)
   	fmt.Println("My constant = ",(math.Pi*math.Pi)/(math.E+math.E))
