@@ -7,6 +7,10 @@ import (
   // "bytes"
   "math"
 )
+//Var to define variables
+var alpha,beta,gamma int
+var iscorrect,iswrong,isascii bool
+
 
 //Shows named return in GO
 func extendedGCD (a,b int) (x,y int) {
@@ -41,4 +45,5 @@ func main(){
   	          	sum(2,3));
   	fmt.Println(swap("Halla","Bazinga"))
   	fmt.Println(extendedGCD(2,3))
+  	fmt.Println(alpha,beta,gamma,iswrong,iscorrect,isascii)
 }
