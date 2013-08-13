@@ -7,9 +7,9 @@ import (
   // "bytes"
   "math"
 )
-//Var to define variables
-var alpha,beta,gamma int
-var iscorrect,iswrong,isascii bool
+//Var to define variables //Now adding initial values
+var alpha,beta,gamma int = 42,0,21
+var iscorrect,iswrong,isascii = true,false,"Yes!" 
 
 
 //Shows named return in GO
