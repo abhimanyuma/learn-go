@@ -111,9 +111,12 @@ func main(){
     //fmt.Println(Big)
 
     v := Vertex{1,2}
+    var y *Vertex = new(Vertex)
+
     v.X = v.X * 3
     vptr := &v
+    y=vptr
     vptr.Y = vptr.Y * v.X
-    fmt.Println(v,*vptr)
+    fmt.Println(v,*y)
 
 }
