@@ -18,7 +18,10 @@ const (
 	Big	= 1<<100
 )
 
-
+type Vertex struct {
+	X int
+	Y int
+}
 
 //Var to define variables //Now adding initial values
 var alpha,beta,gamma int = 42,0,21
@@ -105,6 +108,10 @@ func main(){
 
     fmt.Println(Sqrt(2))
 
-    fmt.Println(needFloat(Big))
+    //fmt.Println(Big)
+
+    v := Vertex{1,2}
+    v.X = v.X * 3
+    fmt.Println(v)
 
 }
