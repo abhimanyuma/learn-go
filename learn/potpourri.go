@@ -7,6 +7,7 @@ import (
   	// "bytes"
   	"math"
   	"math/cmplx"
+  	//"code.google.com/p/go-tour/pic"
 )
 var (
 	ToBe 	bool 		= false
@@ -21,6 +22,11 @@ const (
 type Vertex struct {
 	X int
 	Y int
+}
+
+type Coordinate struct{
+	lat,long float64
+	description string
 }
 
 //Var to define variables //Now adding initial values
@@ -74,6 +80,19 @@ func sum(a,b int) int {
 	return (a+b)
 }
 
+func Pic(dx, dy int) [][]uint8 {
+    
+    arr := make ([][]uint8,dy)
+    for y:=0;y<dy;y++ {
+    	line := make ([]uint8,dx)
+    	for x:= 0;x<dx;x++ {
+    		line[x]=x*y
+    	}
+    	arr[y]=line
+    }
+    return arr
+        
+}
 
 func main(){
 	//Omitting var by using
@@ -132,5 +151,8 @@ func main(){
     var nilslice []int 
 
     fmt.Println (nilslice,len(nilslice),cap(nilslice))
+
+    places := make(map[string] Coordinate)
+    //pic.Show(Pic)
 
 }
