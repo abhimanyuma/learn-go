@@ -14,6 +14,12 @@ var (
 	z      	complex128 	= cmplx.Sqrt(-5 + 12i)
 )
 
+const (
+	Big	= 1<<100
+)
+
+
+
 //Var to define variables //Now adding initial values
 var alpha,beta,gamma int = 42,0,21
 
@@ -98,5 +104,7 @@ func main(){
     fmt.Println(pow(3, 2, 10),pow(3, 3, 20))
 
     fmt.Println(Sqrt(2))
+
+    fmt.Println(needFloat(Big))
 
 }
