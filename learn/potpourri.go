@@ -122,5 +122,15 @@ func main(){
     fibo := []int{1,1,2,3,5,8,13,21}
 
     fmt.Println("First few fib numbers are",fibo)
+    fmt.Println("The first 3 of them are",fibo[0:3])
+
+    maximus := make ([]int,5,10)
+    for _,v := range maximus {
+    	fmt.Println(v)
+    }
+
+    var nilslice []int 
+
+    fmt.Println (nilslice,len(nilslice),cap(nilslice))
 
 }
