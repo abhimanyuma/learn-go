@@ -119,4 +119,8 @@ func main(){
     vptr.Y = vptr.Y * v.X
     fmt.Println(v,*y)
 
+    fibo := []int{1,1,2,3,5,8,13,21}
+
+    fmt.Println("First few fib numbers are",fibo)
+
 }
