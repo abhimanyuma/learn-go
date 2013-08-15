@@ -153,6 +153,8 @@ func main(){
     fmt.Println (nilslice,len(nilslice),cap(nilslice))
 
     places := make(map[string] Coordinate)
+
+    
     //pic.Show(Pic)
 
 }
