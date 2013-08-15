@@ -11,13 +11,13 @@ type Coordinate struct{
 
 func WordCount(s string) map[string]int {
 	var words []string = strings.Fields(s)
-	wordCount=make(map[string]int)
+	wordCount := make(map[string]int)
 	for _,word := range words {
-		c,ok = wordCount["word"]
+		_,ok := wordCount[word]
 		if ok {
-			wordCount["word"]+=1
+			wordCount[word]+=1
 		} else {
-			wordCount["word"]=1
+			wordCount[word]=1
 		} 
 	}
 	return wordCount
@@ -35,8 +35,13 @@ func main(){
 	
 	colorcodes := map[string]string{"red":"#FF0000","blue":"#00FF00","green":"#0000FF"}
 
+	hypotenuse := func(x,y float64)float64 {
+		return (x*x+y*y)
+	} 
+
 	fmt.Println(places["red-fort"])
 	fmt.Println(colorcodes)
 	fmt.Println(WordCount(wikiEntry))
+	fmt.Println(hypotenuse(3,4))
 
 }
